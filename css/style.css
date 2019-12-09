@@ -1,0 +1,403 @@
+body{
+    font-family: Arial, Helventica, sans-serif;
+    font-size:15px;
+    line-height:1.5; /*amount of space between each line*/
+    padding:0;
+    margin: 0; /*side margins, 0 so it fits to screen*/
+    background-color: white;
+}
+
+/* GLobal */
+.container{
+    width: 80%;
+    margin:auto; /*move content to the middle*/
+    overflow:hidden; /*hides overflow outside of divs*/
+}
+
+.button_1{
+    height:38px;
+    background:skyblue;
+    border:none; /* Gets rid of button border */
+    padding-left:20px; /* Makes button longer */
+    padding-right:20px;
+    color: white; /* Color of button text */
+}
+
+/* Header */
+header{
+    background: black;
+    color: white;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: skyblue 3px solid;
+}
+
+/* CSS for a tags (hyperlinks) inside the header tag*/
+header a{ 
+    color: white;
+    /* text-decoration: none;  */
+    text-decoration: none !important; /*remove underline from links*/
+    text-transform: uppercase; 
+    font-size: 16px;
+    display:inline-block;
+}
+
+/*CSS for ul tags inside the header tag*/
+header ul{
+    margin:0;  /* ul has margin by default */
+    padding:0; /*removed bullet points*/
+}
+
+/*CSS for li tags inside the header tag*/
+header li{
+    display:inline; /*Makes page links horizontal, removes bullet points*/
+    padding: 0 20px 0 20px; /*Top, Right, Bottom, Left, Spacing for page links*/
+}
+
+/* CSS for logo id, id uses hashtag*/
+header #logo{
+    float:left;
+}
+
+/*CSS for h1 tag inside logo id tag*/
+header #logo h1{
+    margin:0;
+}
+
+header nav{
+    /*float:right; position navigation links to the right*/
+    margin-top:10px;
+    text-align:center;
+}
+
+/* Highlights text if highlight class is applied to tag */
+header .highlight, header .current a{
+    color: skyblue;
+    font-weight:bold;
+}
+
+/* Makes text pop when mouse hovers over hyperlinks with the 'a' tag */
+header a:hover{
+    color: white;
+    font-weight:bold;
+}
+
+/* Show Case */
+#showcase{
+    min-height: 1000px;
+    /* background:url('../images/showcase.jpg') no-repeat 0 -200px; X-axis, Y-axis */
+    background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/showcase.jpg') no-repeat; /* X-axis, Y-axis, linear-gradient dims the image*/
+
+    background-size: cover; /*allows background image to cover entire page and not show white space when zoomed out*/
+    background-position: center center;
+
+    text-align:center;
+    color:white; 
+}
+
+#showcase a{
+    text-decoration: none !important; /*remove underline from links*/
+    text-transform: uppercase; 
+}
+
+#showcase h1{
+    margin-top:300px;
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+#showcase p{
+    font-size:22px;
+    color: #b3b6b7;
+}
+
+#showcase .button {
+    background-color: rgb(135, 223, 235);
+    border: none;
+    color: white;
+    width: 180px;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+
+  /* CSS for button hover animation*/
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+.button:hover span {
+    padding-right: 25px;
+  }
+  
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+.button:hover {opacity: 1}
+
+#aboutme{
+    min-height: 1000px;
+}
+
+#aboutme img{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 200px;
+    width:600px; /*Set image size*/
+}
+#aboutme h1{
+    font-size:40px;
+    margin-top:250px;
+    text-align:left;
+}
+
+/* Bolds the text*/
+.bold{
+    font-weight: bold;
+}
+
+#aboutme h2{
+    font-size:20px;
+    margin-top:25px;
+    line-height: 1.5; /*amount of space between each line*/
+}
+
+#aboutme h3{
+    font-size:18px;
+    margin-top:30px;
+    line-height: 1.5; /*amount of space between each line*/
+}
+
+#textbox{
+    width: 450px;
+}
+
+/* my skills */
+#myskills{
+    background-color:whitesmoke;
+    /* margin-top: 20px; */
+    min-height: 95px;
+}
+
+#myskills h1{
+    font-size:40px;
+    text-align:left;
+}
+
+#myskills h2{
+    font-size:20px;
+    text-align:left;
+}
+
+* {
+    box-sizing: border-box; /* CSS needed for myskills columns (Responsive Web Design - Grid-View) */
+  }
+
+#myskills .col1{
+    width: 40%;
+    float: left;
+    padding: 15px;
+}
+
+#myskills .col2{
+    width: 60%;
+    float: left;
+    padding: 15px; 
+}
+
+/* Boxes */
+#boxes{
+    /* margin-top:20px; */
+    background-color: whitesmoke;
+}
+
+#boxes h1{
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* Box classes*/
+#boxes .box{  
+    float:left; /* Makes boxes horizontal instead of stacking on each other*/
+    width: 30%; /* Spacing between each box*/
+    padding: 10px;
+    font-size: 15px;
+    text-align:center;
+}
+
+#boxes .box img{
+    width:90px; /* Set image size */
+    height:100px; /* Set image height*/
+}
+
+/* Newsletter */
+#newsletter{
+    padding:15px;
+    color: silver;
+    background:black;
+}
+
+#newsletter h1{
+    /* float:left; */
+    text-align:center;
+}
+
+#newsletter form{
+    /* float:right; */
+    text-align:center;
+    margin-top:15px;
+}
+
+#newsletter input[type="email"]{
+    color: black;
+    padding:4px;
+    height:35px;
+    width:250px;
+}
+
+footer{
+    padding:20px;
+    margin-top:20px;
+    color:grey;
+    background-color:white;
+    text-align:center;
+}
+
+/* Media Queries */
+@media(max-width: 768px){ /* Adjust screen size for mobile/tablet/laptop*/
+    header #logo,
+    header nav,
+    header nav li,
+    #newsletter h1,
+    #newsletter form,
+    #boxes .box{
+        float:none;
+        text-align:center;
+        width:100%;
+    }
+
+    header{
+        padding-bottom:20px;
+    }
+
+    #showcase h1{
+        margin-top:40px;
+    }
+
+    #newsletter button{
+        display:block;
+        width:100%; /* Button is fullsize even when screen shrinks*/
+    }
+
+    #newsletter form input[type="email"]{
+        width: 100%; /* Form is fullsize even when screen shrinks*/
+        margin-bottom:5px;
+    }
+}
+
+/* CSS for projects page*/
+/* Showcase for projects page */
+#projectshowcase{
+    min-height: 500px;
+    background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../images/laptop.jpg') no-repeat; /* linear-gradient dims the image*/
+
+    background-size: cover; /*allows background image to cover entire page and not show white space when zoomed out*/
+    background-position: center center;
+
+    text-align:center;
+    color:white; 
+}
+
+#projectshowcase .button {
+    background-color: rgb(135, 223, 235);
+    border: none;
+    color: white;
+    width: 180px;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+
+#projectshowcase h1{
+    margin-top:100px;
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+#projectshowcase p{
+    font-size:22px;
+    color:  #b3b6b7;
+}
+
+#projectabout{
+    min-height: 400px;
+    margin-top: 100px;
+}
+
+#projectabout img{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 200px;
+    width:600px; /*Set image size*/
+}
+#projectabout h1{
+    font-size:40px;
+
+    text-align:left;
+}
+
+#projectabout h2{
+    font-size:23px;
+    margin-top:25px;
+    line-height: 1.5; /*amount of space between each line*/
+}
+
+#projectabout h3{
+    font-size:18px;
+    margin-top:30px;
+    line-height: 1.5; /*amount of space between each line*/
+}
+
+#projectabout .button {
+    background-color: rgb(135, 223, 235);
+    border: none;
+    color: white;
+    width: 180px;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+
+/*CSS for Smooth scroll, only works for chrome, mozilla, Opera browsers*/
+/* html {
+  scroll-behavior: smooth;
+} */
